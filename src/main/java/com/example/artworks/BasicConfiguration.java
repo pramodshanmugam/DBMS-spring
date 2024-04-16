@@ -34,7 +34,9 @@ public class BasicConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(request -> request.anyRequest()
-                        .authenticated())
+                        .permitAll())
+                   .csrf(csrf -> csrf.disable())
+                   .cors(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }

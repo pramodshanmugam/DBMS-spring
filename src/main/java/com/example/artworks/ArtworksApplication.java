@@ -10,4 +10,6 @@ public class ArtworksApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ArtworksApplication.class, args);
 	}
+
+
 }

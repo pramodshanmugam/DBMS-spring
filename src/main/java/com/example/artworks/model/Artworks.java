@@ -12,17 +12,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @AllArgsConstructor
 @Setter
-@Document(collection = "management")
+@Document(collection = "management2")
 public class Artworks {
     @Id
     private String id;
-    private String Title;
     private String Artist;
+    private String Title;
     private String Year; // Year of creation
     private String Medium; // The medium used, e.g., oil on canvas
     private String Dimensions; // Physical dimensions of the artwork
     private String Description; // A brief description of the artwork
-    private String ImageURL; // URL to an image of the artwork
 
     public void setId(String id) {
         this.id = id;
